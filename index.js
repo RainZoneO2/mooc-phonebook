@@ -30,6 +30,18 @@ app.get('/api/persons', (request, response) => {
     response.send(persons)
 })
 
+app.get('/api/persons/:id', (request, response) => {
+    const id = request.params.id
+    const person = persons.find(person => person.id === id)
+
+    if (person) {
+        response.json(person)
+    } else {
+        response.statusMessage = 'The requested ID does not exist.'
+        response.status(404).end()
+    }
+})
+
 app.get('/info', (request, response) => {    
     const currentDate = new Date()
     response.send(
