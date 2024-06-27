@@ -1,0 +1,27 @@
+{
+  "name": "phonebook-backend",
+  "version": "0.0.1",
+  "description": "Backend for phonebook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainZoneO2/mooc-phonebook-backend.git"
+  },
+  "author": "Ghaith A",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RainZoneO2/mooc-phonebook-backend/issues"
+  },
+  "homepage": "https://github.com/RainZoneO2/mooc-phonebook-backend#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
