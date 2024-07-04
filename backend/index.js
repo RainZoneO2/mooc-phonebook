@@ -39,7 +39,7 @@ const cors = require('cors')
 app.use(cors())
 
 const generateId = () => {
-    const id = Math.floor(Math.random() * 10)
+    const id = Math.floor(Math.random() * 10000)
 
     if (persons.find(person => Number(person.id) === id)) {
         return generateId()
