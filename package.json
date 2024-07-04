@@ -6,19 +6,22 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui":"rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RainZoneO2/mooc-phonebook-backend.git"
+    "url": "git+https://github.com/RainZoneO2/mooc-phonebook.git"
   },
   "author": "Ghaith A",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RainZoneO2/mooc-phonebook-backend/issues"
+    "url": "https://github.com/RainZoneO2/mooc-phonebook/issues"
   },
-  "homepage": "https://github.com/RainZoneO2/mooc-phonebook-backend#readme",
+  "homepage": "https://github.com/RainZoneO2/mooc-phonebook#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "morgan": "^1.10.0"
   },
