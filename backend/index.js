@@ -3,12 +3,6 @@ const express = require('express')
 const app = express()
 const Person = require('./models/person')
 
-// const person = new Person({
-//     name: name,
-//     number: number,
-// })
-
-
 const morgan = require('morgan')
 
 app.use(express.json())

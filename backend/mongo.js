@@ -18,6 +18,12 @@ mongoose.connect(url)
 const name = process.argv[3]
 const number = process.argv[4]
 
+if (!listBool && (!name || !number)) {
+    console.log("Please provide both name and number to add a new contact.")
+    mongoose.connection.close()
+    process.exit(1)
+}
+
 const personSchema = new mongoose.Schema({
     name: String,
     number: String,
